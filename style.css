@@ -1,0 +1,148 @@
+/* ==========================================================
+   90s web palette
+   ========================================================== */
+:root {
+  --page: #c0c0c0;
+  --highlight: #ffffff;
+  --shadow: #808080;
+  --text: #000000;
+  --link: #0000ee;
+  --visited: #551a8b;
+  --accent: #000080;
+  --caution: #ffcc00;
+
+  --serif: "Times New Roman", Times, serif;
+  --sans: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   Page
+   ========================================================== */
+body {
+  margin: 0 auto;
+  padding: 16px;
+  max-width: 1400px;
+  background: var(--page);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/**
+a {
+  color: var(--link);
+}
+
+a:visited {
+  color: var(--visited);
+}
+*/
+
+/* Classic chiseled horizontal rule */
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid var(--shadow);
+  border-bottom: 1px solid var(--highlight);
+}
+
+/* ==========================================================
+   Header
+   ========================================================== */
+header {
+  text-align: center;
+}
+
+header h1 {
+  margin: 8px 0 0;
+  color: var(--accent);
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+header h1 + p {
+  margin: 0 0 8px;
+  color: var(--accent);
+}
+
+header p {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 14px;
+}
+
+/* ==========================================================
+   Responsive video grid
+   ========================================================== */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Cards: raised like a 90s table with border="2" */
+.card {
+  height: 100%;
+  padding: 8px;
+  border: 2px outset var(--highlight);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 8px 0 0;
+  font-family: var(--sans);
+  font-size: 14px;
+}
+
+.card iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 2px inset var(--highlight);
+  background: var(--text);
+}
+
+/* ==========================================================
+   "Coming soon" card
+   ========================================================== */
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+  text-align: center;
+}
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+footer {
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 12px;
+}
+
+/* ==========================================================
+   Utilities
+   ========================================================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
